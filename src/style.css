@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito';
+}
+.flex {
+  display: flex;
+}
+
+article {
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
+.formadd {
+  font-size: 20px;
+  
+  flex-direction: column;
+  gap: 12px;
+}
+.formadd>label {
+  padding-left: 16px;
+}
+.active {
+  justify-content: space-between;
+}
+
+#todo {
+  font-size: 16px;
+  border-radius: 24px;
+  padding: 8px 18px;
+  border: 1px solid;
+  outline: none;
+  width: 375px;
+}
+
+.crear {
+  padding: 4px 8px;
+  border-radius: 22px;
+  border: 1px solid;
+  background-color: white;
+  font-weight: 600;
+}
+.crear:hover {
+  cursor: pointer;
+}
+
+ul {
+  padding-top: 20px;
+}
+li {
+  list-style: none;
+  padding: 8px 20px;
+}
+li>input {
+  margin-right: 32px;
+}
+.tarea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.tarea>div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.tarea>button {
+  width: 16px;
+  height: 16px;
+  border: 0px;
+  background-color: transparent;
+}
+.tarea>button:hover {
+  cursor: pointer;
+}
+.task label {
+  cursor: pointer;
+  display: flex;
+}
+.task label::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-right: .5em;
+}
+.task label:hover::before,
+.task input[type="checkbox"]:hover+label::before {
+  background-color: skyblue;
+}
+.task input[type="checkbox"]:checked+label {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.task input[type="checkbox"]:checked+label::before {
+  background-color: blue;
+}
+.task input[type="checkbox"] {
+  display: none;
+}
+.task input[type="checkbox"]:checked+span:before {
+  border-color: green;
+  color: green;
+}
+.task span {
+  position: absolute;
+  margin-left: 6px;
+  margin-bottom: 6px;
+  height: 1em;
+  width: 1em;
+  border: solid red;
+  border-width: 0 0.2em 0.2em 0;
+  transform: rotate(45deg);
+  width: 6px;
+  height: 12px;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}

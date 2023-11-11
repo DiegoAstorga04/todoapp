@@ -1,0 +1,1 @@
+//para qiue funcione la pagina sin js
