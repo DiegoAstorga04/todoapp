@@ -9,7 +9,7 @@
 }
 
 article {
-  width: 550px;
+  max-width: 550px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
@@ -121,6 +121,10 @@ li>input {
   transform: rotate(45deg);
   width: 6px;
   height: 12px;
+  transition: 100ms;
+}
+.task input[type="checkbox"]:checked + span {
+  opacity: 100%;
 }
 
 svg {
