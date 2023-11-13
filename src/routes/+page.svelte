@@ -12,7 +12,7 @@
     "Comprar milanesas 🛒",
     "Pagar la luz 💡",
     "Rascarse el ombligo 😋",
-    "Preguntarle a Alan sobre placeholders 🤔"
+    "Demostrarle a Alan García lo que pidió 😈"
   ]
 
   function pickRand() {
@@ -20,10 +20,7 @@
     let placeHold = placeholders[random]
     return placeHold
   }
-  /**
-   * TODO: onMount
-   * ?para que funciones deseadas se ejecuten en el cliente
-   */
+  
   let ph
   onMount(() => {
     ph = pickRand()
@@ -59,7 +56,7 @@
           $todos = $todos.filter(t => t.id !== todo.id)
         }}
         class="tarea">
-          <div class="task">
+          <div class="izq">
             <input type="checkbox" name="done" id={todo.id}>
             <label for={todo.id} done={todo.done}>{todo.text}</label>
             <span></span>

@@ -19,7 +19,6 @@ article {
 
 .formadd {
   font-size: 20px;
-  
   flex-direction: column;
   gap: 12px;
 }
@@ -62,14 +61,15 @@ li>input {
 }
 .tarea {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  width: 90%;
+  max-width: 540px;
 }
 .tarea>div {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
+  max-width: 450px;
 }
 .tarea>button {
   width: 16px;
@@ -80,54 +80,50 @@ li>input {
 .tarea>button:hover {
   cursor: pointer;
 }
-.task label {
+.izq label {
   cursor: pointer;
   display: flex;
 }
-.task label::before {
+.izq label::before {
   content: "";
-  width: 1em;
-  height: 1em;
+  min-width: 18px;
+  width: 18px;
+  height: 18px;
   border: 1px solid black;
   border-radius: 4px;
   margin-right: .5em;
 }
-.task label:hover::before,
-.task input[type="checkbox"]:hover+label::before {
-  background-color: skyblue;
+.izq label:hover::before,
+.izq input[type="checkbox"]:hover+label::before {
+  background-color: rgb(160, 160, 160)
 }
-.task input[type="checkbox"]:checked+label {
+.izq input[type="checkbox"]:checked+label {
   text-decoration: line-through;
   text-decoration-thickness: 2px;
 }
-.task input[type="checkbox"]:checked+label::before {
-  background-color: blue;
+.izq input[type="checkbox"]:checked+label::before {
+  background-color: rgb(0, 0, 0);
 }
-.task input[type="checkbox"] {
+.izq input[type="checkbox"] {
   display: none;
 }
-.task input[type="checkbox"]:checked+span:before {
-  border-color: green;
-  color: green;
-}
-.task span {
+.izq span {
   position: absolute;
-  margin-left: 6px;
-  margin-bottom: 6px;
-  height: 1em;
-  width: 1em;
-  border: solid red;
-  border-width: 0 0.2em 0.2em 0;
-  transform: rotate(45deg);
-  width: 6px;
-  height: 12px;
-  transition: 100ms;
 }
-.task input[type="checkbox"]:checked + span {
-  opacity: 100%;
+.izq input[type="checkbox"]:checked~span::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 6px;
+  margin-left: 1px;
+  margin-bottom: 4px;
+  border: solid red;
+  border-width: 0 0 0.2em 0.2em;
+  transform: rotate(315deg);
 }
 
 svg {
+  margin-top: 4px;
   width: 100%;
   height: 100%;
 }
